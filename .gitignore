@@ -1,0 +1,13 @@
+#node_modules
+node_modules/
+
+#package files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+#build output
+dist/
+build/
+#environment variables
+.env

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>EXAM - 28_2</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<div>
+					<h1>CRUD Posts + Comments</h1>
+				</div>
+
+				<div class="api">
+					<input id="apiBase" class="input" value="http://localhost:3001" />
+					<button id="btnReloadAll" class="btn">Reload</button>
+				</div>
+			</header>
+
+			<main class="grid">
+				<section class="card">
+					<div class="cardHeader">
+						<h2>Posts</h2>
+						<div class="row">
+							<label class="checkbox">
+								<input id="toggleShowDeleted" type="checkbox" checked />
+								<span>Display deleted posts</span>
+							</label>
+						</div>
+					</div>
+
+					<form id="postForm" class="form">
+						<div class="formRow">
+							<div class="field">
+								<label class="label" for="postId">ID</label>
+								<input id="postId" class="input" placeholder="(ID auto generated)" disabled />
+							</div>
+							<div class="field">
+								<label class="label" for="postViews">Views</label>
+								<input id="postViews" class="input" type="number" min="0" value="0" />
+							</div>
+						</div>
+
+						<div class="field">
+							<label class="label" for="postTitle">Title</label>
+							<input id="postTitle" class="input" placeholder="Enter title" required />
+						</div>
+
+						<div class="actions">
+							<button id="btnPostCreate" type="button" class="btn primary">Add New</button>
+							<button id="btnPostUpdate" type="button" class="btn" disabled>Update</button>
+							<button id="btnPostCancel" type="button" class="btn ghost" disabled>Cancel</button>
+						</div>
+					</form>
+
+					<div class="listHeader">
+						<div class="muted">List of posts</div>
+						<div class="muted">Select a post to view comments</div>
+					</div>
+					<ul id="postList" class="list"></ul>
+				</section>
+
+				<section class="card">
+					<div class="cardHeader">
+						<h2>Comments</h2>
+						<div class="row">
+							<div class="pill" id="selectedPostPill">No post selected</div>
+						</div>
+					</div>
+
+					<form id="commentForm" class="form">
+						<div class="formRow">
+							<div class="field">
+								<label class="label" for="commentId">ID</label>
+								<input id="commentId" class="input" placeholder="(ID auto generated)" disabled />
+							</div>
+							<div class="field">
+								<label class="label" for="commentPostId">Post ID</label>
+								<select id="commentPostId" class="input"></select>
+							</div>
+						</div>
+
+						<div class="field">
+							<label class="label" for="commentText">Text</label>
+							<input id="commentText" class="input" placeholder="Enter comment text" required />
+						</div>
+
+						<div class="actions">
+							<button id="btnCommentCreate" type="button" class="btn primary">Add Comment</button>
+							<button id="btnCommentUpdate" type="button" class="btn" disabled>Update</button>
+							<button id="btnCommentCancel" type="button" class="btn ghost" disabled>Cancel</button>
+						</div>
+					</form>
+
+					<div class="listHeader">
+						<div class="row">
+							<label class="checkbox">
+								<input id="toggleOnlySelectedPost" type="checkbox" checked />
+								<span>Only show comments of the selected post</span>
+							</label>
+							<label class="checkbox">
+								<input id="toggleShowDeletedComments" type="checkbox" checked />
+								<span>Display deleted comments</span>
+							</label>
+						</div>
+						<div class="muted" id="commentCount"></div>
+					</div>
+					<ul id="commentList" class="list"></ul>
+				</section>
+			</main>
+
+			<footer class="footer">
+                <div class="muted">EXAM - 28_2 &copy; 2025</div>
+            </footer>
+		</div>
+        <script src="./script.js" defer></script>
+	</body>
+</html>
+

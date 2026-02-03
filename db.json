@@ -1,0 +1,69 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "hehe",
+      "views": 100,
+      "isDeleted": true
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200,
+      "isDeleted": true
+    },
+    {
+      "id": "3",
+      "title": "GATITo",
+      "views": 80000,
+      "isDeleted": false
+    },
+    {
+      "id": "4",
+      "title": "Tomato",
+      "views": 900000,
+      "isDeleted": false
+    },
+    {
+      "id": "5",
+      "title": "Ohayo",
+      "views": 890000,
+      "isDeleted": false
+    }
+  ],
+  "comments": [
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1",
+      "isDeleted": false
+    },
+    {
+      "id": "3",
+      "text": "tuyệt vời",
+      "postId": "2",
+      "isDeleted": true
+    },
+    {
+      "id": "4",
+      "text": "mew mew",
+      "postId": "3",
+      "isDeleted": false
+    },
+    {
+      "id": "5",
+      "text": "gau gau",
+      "postId": "3",
+      "isDeleted": false
+    },
+    {
+      "id": "6",
+      "text": "cachua cuacha",
+      "postId": "4",
+      "isDeleted": false
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
